@@ -96,3 +96,6 @@ plt.show()
 #save the model and scaler
 joblib.dump(SVC_model, "svm_breast_cancer_model.pkl")
 joblib.dump(scaler, "scaler.pkl")
+joblib.dump(X.columns.tolist(), "feature_names.pkl")
+# Also create a blank CSV template with correct headers
+pd.DataFrame(columns=X.columns).to_csv("upload_template.csv", index=False)
