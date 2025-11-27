@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 streamlit
 pandas
 numpy
@@ -7,10 +8,16 @@ seaborn
 scikit-learn
 joblib
 =======
+=======
+>>>>>>> 360d926165370aee328f3ed90375aa0740c3d84d
 streamlit
 pandas
 numpy
 scikit-learn
 joblib
+<<<<<<< HEAD
 seaborn
 >>>>>>> f3baa6a (Added patient_features example CSV)
+=======
+seaborn
+>>>>>>> 360d926165370aee328f3ed90375aa0740c3d84d
