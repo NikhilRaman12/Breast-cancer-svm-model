@@ -1,7 +1,6 @@
 #import all the required libraries
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
