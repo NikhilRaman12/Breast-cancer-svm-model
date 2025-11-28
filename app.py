@@ -47,17 +47,17 @@ if uploaded_file:
         st.write("### Results")
         st.dataframe(results)
 
+        # Fixed download button
         st.download_button(
             label="Download Predictions as CSV",
             data=results.to_csv(index=False),
             file_name="breast_cancer_svm_predictions.csv",
             mime="text/csv"
         )
+
     except Exception as e:
         st.error(f"An error occurred during prediction: {e}")
 
-st.markdown("---")
-st.write("**Model:** SVM (RBF Kernel) | **Dataset:** Breast Cancer | **Developer:** Nikhil Raman – Data Scientist (AI/ML)")
-
+# Footer
 st.markdown("---")
 st.write("**Model:** SVM (RBF Kernel) | **Dataset:** Breast Cancer | **Developer:** Nikhil Raman – Data Scientist (AI/ML)")
