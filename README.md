@@ -1,39 +1,96 @@
-# Breast Cancer Prediction (SVM Classifier) – Streamlit Web App
+#  Breast Cancer Prediction using SVM (Streamlit Deployment)
 
-This project is an end-to-end Machine Learning application that predicts whether a breast tumor is **Benign (0)** or **Malignant (1)** using a Support Vector Machine (RBF Kernel).  
-The model is deployed as an interactive **Streamlit Web App**, allowing users to upload patient feature data and receive real-time predictions.
+An end-to-end Machine Learning project that builds, evaluates, and deploys an SVM-based breast cancer tumor classifier using the Breast Cancer Wisconsin dataset.  
+This project demonstrates a complete ML workflow — from data preprocessing to real-time prediction through a Streamlit web application.
 
 ---
 
-##  Project Overview
+##  Project Highlights
 
-Breast cancer diagnosis relies heavily on identifying cell characteristics such as radius, texture, perimeter, and compactness.  
-Using the **Breast Cancer Wisconsin Dataset**, this project demonstrates:
-
-- Complete **data preprocessing**
-- **Feature scaling** using StandardScaler
-- **SVM model training & optimization**
-- Model **evaluation and saving** using Joblib
-- **Deployment** on Streamlit Cloud
-- **CSV upload-based prediction interface**
+- **Support Vector Machine (RBF Kernel)** for high-accuracy classification  
+- **Complete preprocessing pipeline**: cleaning, encoding, scaling  
+- **Hyperparameter tuning** for better model performance  
+- **Interactive Streamlit web app** for real-time predictions  
+- Upload patient feature CSV → get instant predictions  
+- Model saved using **Joblib**, integrated into the app  
+- Fully deployed and publicly accessible  
 
 ---
 
 ##  Live Demo
 
- **Streamlit App:**  
+**Streamlit App:**  
 https://breast-cancer-svm-model-6an2ymwthnprsvwjgckdcw.streamlit.app/
-
- **GitHub Repository:**  
-https://github.com/NikhilRaman12/Breast-cancer-svm-model
 
 ---
 
-##  Machine Learning Workflow
+##  Repository Structure
 
-1. Load dataset  
-2. Handle missing values  
-3. Scale features (StandardScaler)  
-4. Train SVM (RBF kernel)  
-5. Evaluate & validate  
-6. Save model + scal
+```
+|-- app.py                     # Streamlit Web App
+|-- model.py                   # Model training script
+|-- breast-cancer.csv          # Dataset
+|-- patient_features.csv       # Sample input format for app users
+|-- svm_breast_cancer_model.pkl
+|-- scaler.pkl
+|-- requirements.txt
+|-- README.md
+```
+
+---
+
+## Machine Learning Workflow
+
+1. **Load Dataset**  
+2. **Preprocessing**  
+   - Handle missing values  
+   - Remove non-feature columns  
+   - Apply StandardScaler  
+3. **Model Training**  
+   - SVM (RBF Kernel)  
+   - Hyperparameter tuning  
+4. **Model Evaluation**  
+   - Accuracy, confusion matrix, AUC  
+5. **Deployment**  
+   - Export model with joblib  
+   - Build Streamlit UI  
+   - Real-time predictions for uploaded CSV  
+
+---
+
+## 📊 Tech Stack
+
+- **Python**
+- **Scikit-learn**
+- **Pandas, NumPy**
+- **Streamlit**
+- **Joblib**
+
+---
+
+##  How to Use the App
+
+1. Prepare a CSV containing **only feature columns** (no diagnosis column).  
+2. Upload the file in the Streamlit UI.  
+3. View:  
+   - **Prediction** (0 = Benign, 1 = Malignant)  
+   - **Cancer probability score**  
+4. Download the results as CSV.
+
+---
+
+##  Installation (If running locally)
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
+##  Developer
+
+**Nikhil Raman**  
+AI/ML Engineer | Data Scientist  
+https://www.linkedin.com/in/nikhil-raman-k-448589201/
+
