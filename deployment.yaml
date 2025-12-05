@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: breast-cancer-app
+  labels:
+    app: breast-cancer-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: breast-cancer-app
+  template:
+    metadata:
+      labels:
+        app: breast-cancer-app
+    spec:
+      containers:
+        - name: breast-cancer-app
+          image: nikhilraman12/breast-cancer-app:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8501
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
