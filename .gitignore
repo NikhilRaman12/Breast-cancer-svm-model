@@ -1,0 +1,5 @@
+# Ignore Python wheels and build artifacts
+packages/
+*.whl
+__pycache__/
+*.log
